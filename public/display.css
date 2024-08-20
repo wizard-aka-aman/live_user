@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #8a8588;
+/* background-image: linear-gradient(225deg, #d32d8b 0%, #451570 50%, #1f6ca2 100%); */
+  /* background-color: #7887a2; */
+  overflow: hidden;
+}
+
+h2 {
+  font-size: 1.5em;
+  /* color: #333; */
+  background: linear-gradient(45deg, #decbdd, #dfddea);
+
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.scrollable {
+  overflow-y: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  max-width: 800px;
+  margin: 20px auto;
+  border: 2px solid #37484d;
+  background-color: #022b32;
+  border-radius: 20px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 0 10px rgba(71, 71, 169, 0.7);
+
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid rgba(180, 181, 165, 0.9);
+
+  /* border: 1px solid #ddd; */
+  text-align: left;
+}
+
+th {
+  /* background-color: #026144; */
+  /* background-color: #FF3CAC; */
+  /* background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%); */
+  
+  color: white;
+}
+
+td {
+  color: white;
+  /* background-color: #7ea7b5; */
+  /* background-color: #ca78ae; */
+
+  /* color: #022b32; */
+}
+
+.user-status {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-status.online {
+  background-color: rgb(9, 211, 19);
+}
+
+.user-status.offline {
+  background-color: red;
+}
+
+tr:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#userDetailsPopup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ae8fd2;
+  border: 1px solid #645f5f;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(66, 14, 125, 0.832);
+  z-index: 1000;
+  width: 90%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+#userDetailsContent {
+  margin-bottom: 20px;
+}
+
+#closePopup {
+  padding: 10px 20px;
+  background-color: #4d32d8;
+  color: #ffffffeb;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+#closePopup:hover {
+  background-color: #6750dc;
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.5em;
+  }
+  #userList tr {
+    font-size: 14px;
+  }
+  #closePopup {
+    padding: 8px;
+  }
+}
